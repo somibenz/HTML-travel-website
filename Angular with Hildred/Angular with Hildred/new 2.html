@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src= "hst.js"></script>
+<div ng-repeat="subAmount in items">{{subAmount}}</div>
+</head>
+<body ng-app= "myApp" ng-controller="myCtrl">
+
+
+<form ng-submit=CalculateTotal()>
+	<input type="text" ng-model=amount/>
+	<button>+</button>
+	<select ng-model="province">
+	
+<option value="AB">Alberta</option>
+<option value="BC">British Columbia</option>
+<option value="ON">Ontario</option>
+<option value="PEI">Prince Edward Island</option>
+<option value="NB">New Brunswick</option>
+<option value="NFL">NewFoundland</option>
+<option value="SK">Saskachewan</option>
+<option value="MB">Manitoba</option>
+<option value="QC">Quebec</option>
+<option value="NS">Nova Scotia</option>
+<option value="NT">Northwest Territories</option>
+<option value="YT">Yukon</option>
+<option value="NS">Nova Scotia</option>
+<option value="NU">Nunavut</option>
+</select>
+</form>
+<input ng-model="Subtotal"id="subtotal" type="text disabled="disabled />
+<label for="Subtotal">Subtotal</label><br>
+
+<input ng-model="HST"id="HST type="text disabled="disabled />
+<label for="HST">HST</label><br>
+<input  ng-model=Total id="Total" type="text disabled="disabled />
+<label for="Total">Total</label><br>
+</body>
+</html>
